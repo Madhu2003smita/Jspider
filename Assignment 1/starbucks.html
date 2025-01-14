@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Courses Today</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+        .logo-section .logo {
+            width: 200px;
+            height: auto;
+            margin-left: 80px;
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+        }
+        .nav ul li {
+            margin-left: 5px;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+        .nav ul li a span {
+            font-size: 10px;
+            margin-right: 5px;
+        }
+        .button-section {
+            display: flex;
+            gap: 15px;
+            margin-right: 30px;
+        }
+        .all-courses, .sign-in {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .all-courses {
+            background-color: white;
+            border: 1px solid #333;
+            color: #333;
+        } 
+        .all-courses:hover{
+            color: white; 
+            background-color: black;
+        }
+        .sign-in {
+            background-color: #333;
+            color: white;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .image-section {
+            margin-left: 100px;
+            margin-top: 380px;
+            background-image: url('https://ap.starbucksglobalacademy.com/assets/img/rfi-bg-image.86419587.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-section {
+            margin-top: 180px;
+            margin-right: 100px;
+            flex: 1;
+            padding: 50px;
+            
+        }
+        h2 {
+            margin-top: 200px;
+            font-size: 2.2em;
+           
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        a{
+            color: green;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="partner"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .partner{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+        }
+        input[type="tel"]{
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100px;
+            
+        }
+        .countrycode{
+            padding: 10px;
+            
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+        .country {
+            height: 35px;
+            width: 250px;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+        .next-button {
+            width: 80px;
+            margin-left: 250px;
+            padding: 10px 20px 10px 20px;
+            background-color: #00754a;
+            color: white;
+            border: none;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background-color: #005a36;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <img src="https://ap.starbucksglobalacademy.com/assets/img/logo.e4c5e5aa.svg" alt="Starbucks Logo" class="logo" height="100px" width="100px">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Pursuit of Good <span>&#9660;</span></a></li>
+                <li><a href="#">Third Place <span>&#9660;</span></a></li>
+                <li><a href="#">Coffee Academy <span>&#9660;</span></a></li>
+                <li><a href="#">Opportunity <span>&#9660;</span></a></li>
+            </ul>
+        </nav>
+        <div class="button-section">
+            <button class="all-courses">All Courses</button>
+            <button class="sign-in">Sign In</button>
+        </div>
+    </header>
+
+<div class="container">
+    <div class="image-section">
+        <img src="https://ap.starbucksglobalacademy.com/assets/img/rfi-bg-image.86419587.png" height="auto" width="500px">
+    </div>
+    <div class="form-section">
+        <h2>Take courses today</h2>
+        <p>There are many pathways to opportunity and success, and education is<br> a great one. To get started with taking courses on Starbucks Global<br> Academy, simply enter your name and email in the form below, and we<br> will send you updates and a link to your account.</p>
+        <p><strong>Already have an account?</strong><br> <a href="#">Sign in</a> to add these courses to your account.</p>
+        
+        <form>
+            <label for="first-name">First name*</label><br>
+            <input type="text" id="first-name" name="first-name"><br>
+            <label for="last-name">Last name*</label><br>
+            <input type="text" id="last-name" name="last-name"><br>
+            <label for="email">Email*</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="location">Location*</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="phone number">Phone Number</label><br>
+                <select class="country">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="location1">Asia Pacific Support Center</option>
+                    <option value="location2">Australia</option>
+                    <option value="location2">Cambodia</option>
+                    <option value="location2">Hong Kong</option>
+                    <option value="location2">India</option>
+                    <option value="location2">Indonesia</option>
+                    <option value="location2">Japan</option>
+                    <option value="location2">Laos</option>
+                    <option value="location2">Malaysia</option>
+                    <option value="location2">New Zealand</option>
+                    <option value="location2">Philippines</option>
+                    <option value="location2">Singapore</option>
+                    <option value="location2">South Korea</option>
+                    <option value="location2">Taiwan</option>
+                    <option value="location2">Thailand</option>
+                    <option value="location2">Vietnam</option>
+                </select>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="countrycode" id="">
+                    <option value="">+91</option>
+                    <option value="">+91</option>
+                    <option value="">+91</option>
+                    <option value="">+91</option>
+                    <option value="">+91</option>
+                </select>
+                <input type="tel">
+                <br>
+
+
+                
+                <label for="starbucks partner">Are you a Starbucks Partner?*</label><br>
+                <select class="partner">
+                    <option value="" disabled selected></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br><br>
+                <button type="submit" class="next-button">Next</button>
+    
+    </form>
+    </div>
+
+</div>
+
+</body>
+</html>

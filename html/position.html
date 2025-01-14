@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .parent{
+            margin: 100px 0px 0px 100px;
+            height: 600px;
+            width: 600px;
+            background-color: aqua;
+
+        }
+        .parent> div{
+            height: 100px;
+            width: 100px;
+            font-size: inherit;
+        }
+        .m1{
+            /* position: static; */
+            /* when position is static then the top buttomwill not work */
+            position: relative;
+            /* when position is relative the position is depending on the parent  */
+            top: 50px;
+            left: 50px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="m1" style="background-color: purple;">10</div>
+        <div class="m2" style="background-color: green;">20</div>
+        <div class="m3" style="background-color: yellow;">30</div>
+    </div>
+</body>
+
+</html>

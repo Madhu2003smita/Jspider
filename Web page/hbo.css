@@ -1,0 +1,188 @@
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    padding-top: 15px;
+    height: 5px;
+}
+.movies a{
+    justify-content: space-around;
+    text-decoration: none;
+    color: #404040;
+    padding-left: 20px;
+}
+.movies select{
+    border-color: transparent;
+    background-color: white;
+    font-size: 17px;
+    padding-left: 5px;
+}
+.button{
+    background-color: white;
+    border-color: transparent;
+}
+.dragon{
+    background-image: url("https://static.hbo.com/2024-05/house-of-the-dragon-s2-ka-2000x700.jpg?w=1200");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.dragon h6{
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 260px;
+}
+.dragon h3{
+    color: white;
+    padding-left: 100px;
+    font-size: 40px;
+    position: relative;
+    top: -25px;
+}
+.dragon h5{
+    color: white;
+    padding-left: 100px;
+    font-size: 16px;
+    position: relative;
+    top: -50px;
+}
+.button-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    top: -100px;
+    padding-left: 100px;
+}
+.button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+.button-icon {
+    margin-right: 8px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+.button:first-child .button-icon {
+    margin-right: 8px;
+}
+.stream{
+    text-align: center;
+    position: relative;
+    top: -67px;
+}
+.showcase {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+} 
+.show-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 190px;
+}
+.show-item img {
+    width: 250px;
+    height: 150px;
+}
+.show-item h4 {
+    color: #888;
+    font-size: 0.9em;
+}
+.show-item h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+.show-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+.schedule-container{
+    background-color: rgb(221, 221, 221);
+}
+.schedule-header{
+    display: flex;
+    padding-top: 1px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 210px;
+    padding-right: 170px;
+    font-size: 15px;
+}
+.schedule-header a{
+    text-decoration: none;
+}
+.show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 210px;
+    padding-right: 170px;
+    font-size: 14px;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 210px;
+    padding-right: 170px;
+    font-size: 14px;
+    color: #888;
+    padding-bottom: 30px;
+}
+.max{
+    margin-top: 60px;
+    background-color: rgb(5, 5, 207);
+    display: flex;
+    justify-content: space-evenly;
+}
+.max img {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.side h4{
+    color: white;
+}
+.side img{
+    background-color: rgb(5, 5, 207);
+}
+.side button{
+    color: black;
+    background-color: white;
+}
+.coming h2{
+    text-align: center;
+    padding-top: 50px;
+}
+.soon{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+.soon img{
+    height: 270px;
+    width: 450px;
+}
+.dune{
+    height: 50px;
+}

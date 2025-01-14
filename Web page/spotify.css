@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 90px;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.section button{
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+.section h3{
+    position: relative;
+    top: -10px;
+}
+.section h6{
+    line-height: 1.5;
+    font-size: 12px;
+    position: relative;
+    top: -30px;
+}

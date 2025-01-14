@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+    height: 60px;
+   
+}
+.search>input{
+    height: 30px;
+    width: 550px;
+    border-radius: 5px;
+    padding: 0px 30px;
+    border: 1px solid gray;
+}
+.search>img{
+    position: relative;
+    top: 5px;
+    left: 30px;
+    height: 20px;
+}
+.account select{
+    border: none;
+    background-color: inherit;
+    width: 100px;
+}
+.account>button{
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+nav{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0px 40px;
+    background-color: rgb(231, 230, 230);
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    margin: 0px 5px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    font-family: sans-serif;
+}
+section h2{
+    color: black;
+}
+section a{
+    text-decoration: none;
+    color: red;
+}
+article{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+
+}
+article img{
+    position: relative;
+    top: 60px;
+    transition: .8s;
+
+}
+article img :hover{
+    top: 0px;
+}
+article span{
+    color: grey;
+}
+.stream{
+    margin-top: 80px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.events{
+    margin-left: 70px;
+    margin-top: 70px;
+}
+.events h2{
+    font-family: sans-serif;
+}
+.events img{
+    border-radius: 5px;
+}

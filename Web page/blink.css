@@ -1,0 +1,36 @@
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid;
+    padding: 0px 50px;
+}
+.address h4{
+    height: 10px;
+}
+.address select{
+    border-color: transparent;
+    background-color: white;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+.menu select{
+    border-color: transparent;
+    color: grey;
+    background-color: white;
+    font-size: 18px;
+}
+.buy{
+    display: flex;
+    justify-content: space-between;
+}

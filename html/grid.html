@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            align-items: end;
+            color: white;
+            height: 600px;
+            width: 600px;
+            display: grid;
+            align-content: space-evenly;
+            justify-content: space-evenly;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            font-size: 60px;
+            background-color: darkolivegreen;
+
+        }
+        .m1,.mn,.mp{
+            height: 100px;
+            width: 100px;
+        }
+        .m1{
+            background-color: blueviolet;
+        }
+        .mn{
+            background-color: darksalmon;
+        }
+        .mp{
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="m1">10</div>
+        <div class="mn">20</div>
+        <div class="mp">30</div>
+        <div class="m1">40</div>
+        <div class="mn">50</div>
+        <div class="mp">60</div>
+        <div class="m1">70</div>
+        <div class="mn">80</div>
+        <div class="mp">90</div>
+    </div>
+</body>
+</html>
