@@ -73,16 +73,21 @@
 
 // export default App;
 // App.js
-import React from 'react';
+import React,{useState} from 'react';
 //import Resturant from '../src/Resturant';
-import Homepage from './Home/Homepage';
-function App() {
+// import Homepage from './Home/Homepage';
+import Navbar from './Navbar'
+export default function App(){
+  let [stateNum,setStateNum]=useState(0)
+  function Change(){
+    setStateNum(++stateNum)
+  }
   return (
     <div>
-      <Homepage/>
+    <h1>The value on count of App is : {stateNum}</h1>
+    <button onClick={Change}>Increase</button>
+    <Navbar stateNum={stateNum}setStateNum={setStateNum}/>
     </div>
-  );
+  )
 }
-
-export default App;
 

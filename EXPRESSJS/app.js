@@ -50,61 +50,151 @@
 
 // const express = require('express');
 // const app = express();
-// app.use(express.urlencoded({extended:true}));
-// app.get('/',(req,res)=>{
+// const fs = require('fs');
+// const mongodb = require('mongodb').MongoClient;
+// let collection;
+
+// let connectDb = async () => {
+//     let connection = await mongodb.connect('mongodb://localhost:27017');
+//     let database = await connection.db('user');
+//     collection = await database.collection('data');
+// }
+// connectDb();
+
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// app.get('/', (req, res) => {
 //     res.send(` 
-//         <form action="/" method="post">
+//         <form action="/submit" method="post">
 //         <fieldset>
 //             <legend>User Info</legend>
-//             <label for="username">username:</label>
+//             <label for="username">Username:</label>
 //             <input type="text" name="username" id="username"><br><br>
-//             <label for="password">password</label>
+//             <label for="password">Password:</label>
 //             <input type="password" name="password" id="password"><br><br>
 //             <button type="submit">Submit</button>
 //         </fieldset>
-//     </form>`
-// )
-// })
-// app.post('/',(req,res)=>{
+//     </form>`);
+// });
+
+// app.post('/submit', async (req, res) => {
 //     console.log(req.body);
+//     await collection.insertOne(req.body);
 //     res.send('Data has been submitted');
+// });
+
+// app.get('/user', async (req, res) => {
+//     let payload = await collection.find({}).toArray();
+//     let output = "";
+    
+//     payload.forEach(user => {
+//         output += `
+//         <h3>UserName: ${user.username}</h3>
+//         <p>Password: ${user.password}</p>
+//         `;
+//     });
+
+//     res.send(output);
+// });
+
+// app.listen(5000, () => {
+//     console.log('Server is running on port 5000');
+// });
+
+const { MongoClient, Collection } = require('mongodb');
+
+let connectDb = async()=>{
+    const connection =  new MongoClient('mongodb://127.0.0.1:27017');
+    await connection.connect();
+
+    console.log('connected');
+    const db = connection.db('demo_db_again');
+    console.log('db createed');
+    let collection=db.createCollection('student_school');
+    console.log('collection created');
+}
+
+connectDb();
+
+
+
+
+
+
+const http=require('http');
+const server=http.createServer((req,res)=>{
+    
+    res.end('server is running on port 5000');
+})
+
+
+
+server.listen(5000,err=>{
+    if (err)
+    console.log('server is running on port 5000');
+})
+
+
+//Middleware
+// const express =require('express')
+// const app = express()
+// app.use((req,res,next)=>{
+//     console.log("Middleware 1");
+//     next()
+    
+// })
+// app.use((req,res,next)=>{
+//     console.log("Middleware 2");
+//     next()
+    
+// })
+// app.get('/',(req,res)=>{
+//     res.send("Hello Express")
 // })
 // app.listen(5000,err=>{
-//     if(err) throw err;
-//     console.log('Server is running on port 5000');
+//     if (err) throw err;
+//     console.log("Server is running on 5000");
+    
 // })
+// const express = require('express');
+// const mongodb = require('mongodb').MongoClient
+// let connectDb = async()=>{
+//   let connection = await mongodb.connect('mongodb://localhost:27017');
+//   let database = await connection.db('user');
+//   let collection = await database.createCollection('job');
+// }
+// connectDb()
+// // const path = require('path');
+// // const fs = require('fs');
+// const app = express();
 
 
+// app.set(path.join(__dirname));
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.urlencoded({ extended: true }));
 
-const express = require('express');
-const path = require('path');
+// app.get('/', (req, res) => {
+//   const stream = fs.createReadStream(path.join(__dirname, 'home.html'));
+//   stream.pipe(res);
+// });
 
-const app = express();
+// app.get('/login', (req, res) => {
+//   const stream = fs.createReadStream(path.join(__dirname, 'login.html'));
+//   stream.pipe(res);
+// });
 
-// Set the view engine to serve static HTML files
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true })); // To handle form data
+// app.get('/contact', (req, res) => {
+//   const stream = fs.createReadStream(path.join(__dirname, 'contact.html'));
+//   stream.pipe(res);
+// });
 
-// Routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home.html'));
-});
-
-app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'login.html'));
-});
-
-app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname,'contact.html'));
-});
-
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
-});
-
+// app.get('/about', (req, res) => {
+//   const stream = fs.createReadStream(path.join(__dirname, 'about.html'));
+//   stream.pipe(res);
+// });
 // Start the server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
+// app.listen(3000, err => {
+//   if (err) throw err;
+//   console.log(`Server is running on port 3000`);
+// });
